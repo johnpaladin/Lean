@@ -1,0 +1,157 @@
+
+video {
+  width: 40%; 
+  height: auto;
+  min-width: 350px;
+}
+
+.logo{
+    float: left  
+}
+
+.logo p{
+    padding: 0px 16px;
+    font-size: 17px; 
+    text-align: match-parent;
+    color: white
+}
+
+p.impact {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+body {font-family: Verdana, sans-serif; margin:0}
+
+/*Add a black background color to the top navigation*/
+.topnav{
+    background-color: transparent;
+    overflow: hidden;
+    float: right;
+}
+
+/*Style the links inside the navigation bar*/
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 10px;
+    text-decoration: none;
+    font-size: 17px; 
+    font-family:monospace;
+    text-transform: uppercase;
+}
+
+/*Change the color of links on hover*/
+.topnav a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+/*Add a color to the active/current link*/
+.topnav a.active{
+    background-color:  rgba(255,255, 255, 0.8);;
+    color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none; 
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+.topper {
+   position: absolute;
+   left: 0;
+   top: 0;
+    z-index: -10;
+   width: 100%;
+   background-color: black; 
+   text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 630px){
+
+    video {
+        width: 90%;
+    }
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 630px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 630px) {
+  .topnav.responsive {position: relative;
+    width: 100%;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    background-color: rgb(77,77,77,0.9);
+  }
+    
+  .topnav.responsive a.active {
+    background-color: rgb(255,255,255,0.7);
+  }
+    
+    .topnav.responsive a:hover{
+        background-color: ghostwhite;
+    }
+}
+
+
+
+
+
+[class*="col-"] { float: left; }
+.col-xs {width: 100%}
+.col-xs-1 {width: 8.333%}
+.col-xs-2 {width: 16.667%}
+.col-xs-3 { width: 25%}
+.col-xs-4 {width: 33.333%}
+.col-xs-5 {width: 41.667%}
+.col-xs-6 {width: 50%}
+.col-xs-7 {width: 58.333%}
+.col-xs-8 {width: 66.667%}
+.col-xs-9 {width: 75%}
+.col-xs-10 {width: 83.333%}
+.col-xs-11 {width: 91.667%}
+.col-xs-12 {width: 100%}
+@media only screen and (min-width: 630px) {
+    .col-md {width: 100%}
+    .col-md-1 {width: 8.333%}
+    .col-md-2 {width: 16.667%}
+    .col-md-3 {width: 25%}
+    .col-md-4 {width: 33.333%}
+    .col-md-5 {width: 41.667%}
+    .col-md-6 {width: 50%}
+    .col-md-7 {width: 58.333%}
+    .col-md-8 {width: 66.667%}
+    .col-md-9 {width: 75%}
+    .col-md-10 {width: 83.333%} 
+    .col-md-11 {width: 91.667%}
+    .col-md-12 {width: 100%}
+}

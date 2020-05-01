@@ -1,35 +1,114 @@
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Final Project for HTML5/CSS3 Course">
+        <meta name="keywords" content="HTML,CSS,Javascript,jQuery">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Backstreet Boys</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css"/> 
+        <style> 
+            body {
+              background-image: url("assets/images/bsbwallpaper.jpg") ;
+              /* Background image is centered vertically and horizontally at all times */
+              background-position: center center;
+              /* Background image doesn't tile */
+              background-repeat: no-repeat;
+              /* Background image is fixed in the viewport so that it doesn't move when 
+                 the content's height is greater than the image's height */
+              background-attachment: fixed;
+              /* This is what makes the background image rescale based
+                 on the container's size */
+              background-size: cover;
+            }
+            
+         h3 {
+            color: white;
+            font-family:fantasy;
+            }
+            
+        .button {
+              display: inline-block;
+              padding: 6px 10px;
+              color: #FFFFFF;
+              border: 3px solid #FFFFFF;
+              border-radius: 10px;
+              font-weight: 700;
+              line-height: normal;
+              text-decoration: none;
+              text-align: center;
+              text-transform: uppercase;
+              font-family:monospace;
+            }
 
-<h1>JavaScript 验证输入</h1>
+        .button:hover{
+            background-color: whitesmoke;
+            color: black;
+        }
 
-<p>请输入 1 到 10 之间的数字：</p>
+        .container {
+          display: table;
+          padding-top: 80px;
+          width: 100%;
+        }
 
-<input id="numb">
-
-<button type="button" onclick="myFunction()">提交</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-    var x, text;
-
-    // 获取 id="numb" 的值
-    x = document.getElementById("numb").value;
-
-    // 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 Not a Number or less than one or greater than 10
-    if (isNaN(x) || x < 1 || x > 10) {
-        text = "输入错误";
-    } else {
-        text = "输入正确";
-    }
-    document.getElementById("demo").innerHTML = text;
-}
-</script>
-
-</body>
+        .content {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="logo" id="bsblogo">
+             <p class="impact">Backstreet boys</p>
+        </div>
+        <nav class="topnav" id="myTopnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="discography.html">Discography</a>
+            <a href="media.html">Media</a>
+            <a href="merch.html">Shop</a>
+            <a href="tour-date.html">Tour</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+               <i class="fa fa-bars" id="iconshowed"></i>
+            </a>
+        </nav>
+        
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              var y = document.getElementById("bsblogo");
+              var z = document.getElementById("iconshowed");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+                y.style.display="none";
+                z.className = "fa fa-times";
+              } else {
+                x.className = "topnav";
+                y.style.display="block";
+                  z.className = "fa fa-bars";
+              }
+            }
+        </script>
+        
+        
+        
+        <header class="container">
+            <section class="content">
+                <video class="video-container" autoplay muted controls>
+                    <source src="assets/videos/iwantitthatway.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>We live in your back street</h3>
+                <p><a class="button" id="load-more-content" href="#top">Learn more</a></p>
+            </section> 
+        </header> 
+        
+        <div class="footer">
+            <p>© 2020 Backstreet Boys. All rights reserved.</p>
+        </div>
+        
+    </body>
 </html>
